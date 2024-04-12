@@ -11,12 +11,17 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('activities', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
+            $table->string('activity_id');
             $table->timestamps();
 
             $table->string('type');
             $table->string('state');
-            $table->boolean('availability')->default(false);
+            $table->string('result');
+            $table->dateTimeTz('started_at');
+            $table->dateTimeTz('completed_at')->nullable();
+            $table->dateTimeTz('cancelled_at')->nullable();
+            $table->dateTimeTz('expires_at')->nullable();
             $table->text('description')->nullable();
             $table->text('text')->nullable();
             $table->float('timing_wait')->nullable();

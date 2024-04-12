@@ -16,6 +16,7 @@ return new class extends Migration {
 
             $table->string('name');
             $table->foreignId('project_id')->constrained()->cascadeOnDelete();
+            $table->boolean('is_available')->default(true);
 
             $table->softDeletes();
         });

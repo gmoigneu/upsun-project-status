@@ -11,6 +11,11 @@ class Project extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'project',
+        'provider',
+    ];
+
     public function environments(): HasMany
     {
         return $this->hasMany(Environment::class);

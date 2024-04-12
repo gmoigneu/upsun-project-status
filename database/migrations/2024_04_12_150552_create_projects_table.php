@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->timestamps();
 
             $table->string('project');
-            $table->string('provider');
+            $table->string('provider')->nullable();
 
             $table->softDeletes();
         });

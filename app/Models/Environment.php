@@ -11,6 +11,8 @@ class Environment extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'project_id', 'is_available'];
+
     public function project(): BelongsTo
     {
         return $this->belongsTo(Project::class);

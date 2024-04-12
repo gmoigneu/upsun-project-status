@@ -42,7 +42,7 @@ class ActivityFactory extends Factory
 
         return [
             'type' => $this->faker->randomElement(array_merge($pending_activities, $nok_activities, $ok_activities)),
-            'state' => $this->faker->randomElement(['in_progress', 'completed', 'cancelled']),
+            'state' => $this->faker->randomElement(['pending', 'in_progress', 'completed', 'cancelled']),
             'availability' => $this->faker->boolean(70),
             'description' => $this->faker->sentence(),
             'text' => $this->faker->sentence(),
