@@ -17,7 +17,8 @@ class EnvironmentFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->word(),
+            'project_id' => \App\Models\Project::factory(),
         ];
     }
 }

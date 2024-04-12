@@ -17,7 +17,8 @@ class ProjectFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'project' => $this->faker->regexify('[a-z0-9]{13}'),
+            'provider' => $this->faker->randomElement(['platformsh', 'upsun']),
         ];
     }
 }
