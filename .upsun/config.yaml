@@ -9,6 +9,11 @@ applications:
     # Complete list of available runtimes: https://docs.upsun.com/create-apps/app-reference.html#types
     type: "php:8.2"
 
+    runtime:  
+      extensions:  
+        - redis
+        - pdo_pgsql
+
     # Choose which container profile (ratio CPU+RAM) your app will use. Default value comes from the image itself.
     # More information: https://docs.upsun.com/manage-resources/adjust-resources.html#adjust-a-container-profile
     # container_profile:
