@@ -1,6 +1,5 @@
 export APP_NAME="Upsun Status"
 export APP_ENV="production"
-export APP_KEY="base64:dTf+G1UURMzhtdef5qCRysuqom/nUbthhXcpwaEBxqw="
 export APP_DEBUG=false
 export APP_TIMEZONE=UTC
 
