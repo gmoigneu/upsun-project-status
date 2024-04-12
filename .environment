@@ -1,6 +1,4 @@
 export APP_NAME="Upsun Status"
-export APP_ENV="local"
-export APP_DEBUG=true
 export APP_TIMEZONE=UTC
 
 export APP_LOCALE=en
