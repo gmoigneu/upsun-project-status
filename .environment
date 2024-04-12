@@ -1,3 +1,36 @@
+export APP_NAME="Upsun Status"
+export APP_ENV="production"
+export APP_KEY="base64:dTf+G1UURMzhtdef5qCRysuqom/nUbthhXcpwaEBxqw="
+export APP_DEBUG=false
+export APP_TIMEZONE=UTC
+
+export APP_LOCALE=en
+export APP_FALLBACK_LOCALE=en
+export APP_FAKER_LOCALE=en_US
+
+export APP_MAINTENANCE_DRIVER=file
+export APP_MAINTENANCE_STORE=database
+
+export BCRYPT_ROUNDS=12
+
+export LOG_CHANNEL=stack
+export LOG_STACK=single
+export LOG_DEPRECATIONS_CHANNEL=null
+export LOG_LEVEL=debug
+
+export SESSION_DRIVER=redis
+export SESSION_LIFETIME=120
+export SESSION_ENCRYPT=false
+export SESSION_PATH=/
+export SESSION_DOMAIN=null
+
+export BROADCAST_CONNECTION=redis
+export FILESYSTEM_DISK=local
+export QUEUE_CONNECTION=redis
+
+export CACHE_STORE=redis
+#export CACHE_PREFIX=
+
 # Set database environment variables
 export DB_HOST="$POSTGRESQL_HOST"
 export DB_PORT="$POSTGRESQL_PORT"
@@ -5,7 +38,7 @@ export DB_PATH="$POSTGRESQL_PATH"
 export DB_USERNAME="$POSTGRESQL_USERNAME"
 export DB_PASSWORD="$POSTGRESQL_PASSWORD"
 export DB_SCHEME="postgresql"
-export DATABASE_URL="${DB_SCHEME}://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_PATH}"
+export DB_URL="${DB_SCHEME}://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_PATH}"
 
 # Set Laravel-specific environment variables
 export DB_CONNECTION="$DB_SCHEME"
