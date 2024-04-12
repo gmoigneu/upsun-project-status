@@ -1,0 +1,83 @@
+{
+	"id": "7txhbujm4umsy",
+	"_links": {
+		"self": {
+			"href": "https://ch-1.platform.sh/api/projects/z3zxy3oknvllq/activities/7txhbujm4umsy"
+		},
+		"log": {
+			"href": "/api/projects/z3zxy3oknvllq/activities/7txhbujm4umsy/log"
+		}
+	},
+	"created_at": "2024-04-12T20:41:52.677478+00:00",
+	"updated_at": null,
+	"type": "environment.redeploy",
+	"parameters": {
+		"user": "2ae6ca7d-f5bf-4749-b8a2-d2bedcc7459e",
+		"environment": "main"
+	},
+	"project": "z3zxy3oknvllq",
+	"environments": [
+		"main"
+	],
+	"state": "pending",
+	"result": null,
+	"started_at": null,
+	"completed_at": null,
+	"completion_percent": 0,
+	"cancelled_at": null,
+	"timings": [],
+	"log": null,
+	"payload": {
+		"user": {
+			"id": "2ae6ca7d-f5bf-4749-b8a2-d2bedcc7459e",
+			"created_at": "2024-04-12T20:40:55.398239+00:00",
+			"updated_at": null,
+			"display_name": "Guillaume Moigneu"
+		},
+		"environment": {
+			"id": "main",
+			"created_at": "2024-03-12T15:58:09.377408+00:00",
+			"updated_at": "2024-04-12T20:30:54.184840+00:00",
+			"name": "main",
+			"machine_name": "main-bvxea6i",
+			"title": "Main",
+			"attributes": [],
+			"type": "production",
+			"parent": null,
+			"default_domain": null,
+			"has_domains": false,
+			"clone_parent_on_create": true,
+			"deployment_target": "local",
+			"is_pr": false,
+			"status": "active",
+			"enable_smtp": true,
+			"restrict_robots": true,
+			"edge_hostname": "main-bvxea6i-z3zxy3oknvllq.ch-1.platformsh.site",
+			"deployment_state": {
+				"last_deployment_successful": true,
+				"last_deployment_at": "2024-04-12T20:30:54.184454+00:00",
+				"crons": {
+					"enabled": true,
+					"status": "running"
+				}
+			},
+			"resources_overrides": [],
+			"last_active_at": "2024-04-12T20:30:49.073535+00:00",
+			"last_backup_at": "2024-04-12T02:09:59.639211+00:00",
+			"project": "z3zxy3oknvllq",
+			"is_main": true,
+			"is_dirty": false,
+			"has_code": true,
+			"head_commit": "cefb7e676a30f2499facf6319e2d9729f9178cdb",
+			"merge_info": {
+				"commits_ahead": 0,
+				"commits_behind": 0,
+				"parent_ref": null
+			},
+			"has_deployment": true
+		}
+	},
+	"description": "<user data-id=\"2ae6ca7d-f5bf-4749-b8a2-d2bedcc7459e\">Guillaume Moigneu</user> redeployed environment <environment data-id=\"main\">Main</environment>",
+	"text": "Guillaume Moigneu redeployed environment Main",
+	"expires_at": "2025-04-12T20:41:52.677478+00:00"
+}

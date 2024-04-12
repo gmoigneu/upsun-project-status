@@ -45,12 +45,12 @@ class AvailabilityHelper
 
         // Activity will bring the environment up when completed
         if (in_array($activity->type, self::OK_ACTIVITIES)) {
-            $activity->environment->is_available = ($activity->state === 'completed');
+            $activity->environment->is_available = ($activity->state === 'complete');
         }
 
         // Activity will bring the environment down before it's completed
         if (in_array($activity->type, self::PENDING_ACTIVITIES)) {
-            $activity->environment->is_available = ($activity->state === 'completed');
+            $activity->environment->is_available = ($activity->state === 'complete');
         }
 
         $activity->environment->save();

@@ -17,8 +17,8 @@ return new class extends Migration {
 
             $table->string('type');
             $table->string('state');
-            $table->string('result');
-            $table->dateTimeTz('started_at');
+            $table->string('result')->nullable();
+            $table->dateTimeTz('started_at')->nullable();
             $table->dateTimeTz('completed_at')->nullable();
             $table->dateTimeTz('cancelled_at')->nullable();
             $table->dateTimeTz('expires_at')->nullable();
