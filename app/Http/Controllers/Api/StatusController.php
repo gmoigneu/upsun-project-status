@@ -14,14 +14,10 @@ class StatusController extends Controller
 {
     public function show(Request $request, Project $project, Environment $environment)
     {
-        // Fetch the status from the cache
-        $available = Cache::get('env-' . $environment->id);
-
-        // If not in cache, check the database and set it
-        if (!$available) {
-            $available = $environment->is_available;
-            Cache::put('env-' . $environment->id, $available);
-        }
+        // Fetch or set the status from/in the cache
+        $available = Cache::rememberForever('env-' . $environment->id, function () use ($environment) {
+            return $environment->is_available;
+        });
 
         return response()->json([
             'project' => $project->project,
