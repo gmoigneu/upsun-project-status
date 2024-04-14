@@ -4,9 +4,11 @@ The goal of this project is to provide an hosted application for Upsun or Platfo
 
 You can use the app directly on `https://status.woop.ly/api/`. 
 
-## Set this app
+## Install the application
 
 ### Local development
+
+It requires `redis` and `pgsql` (or any Eloquent relational database). The best way to run it is through Laravel Sail. 
 
 ```
 composer install
@@ -37,7 +39,20 @@ To query the availability status, use:
 curl -X GET -H "Content-Type: application/json" https://status.woop.ly/api/z3zxy3oknvllq/main | jq
 ```
 
-## Use the app
+### Debugging
+
+If you need to look into what is happening, Telescope is installed.
+
+Update the environments variables with the following:
+
+```
+APP_ENV => local
+APP_DEBUG => true
+```
+
+You will then be able to access the `/telescope` endpoint.
+
+## Use the hosted instance
 
 Add a `webhook` integration on your Platform.sh or Upsun project with the following target: `https://status.woop.ly/api/`.
 
